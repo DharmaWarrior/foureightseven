@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <style>
+    .lefty {
+        width: 50%;
+        float: left;
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
+    }
+    .righty {
+        width: 50%;
+        float: right;
+        background-color: rgba(246,230,217,255);
+    }
+
+    .allbutton {
+        display: flex;
+        justify-content: center;
+    }
+
+    .box1 {
+        border: 1px solid black; 
+        background-color: rgb(255, 255, 255); 
+        height: 600px; 
+        margin-left: 120px; 
+        padding: 10px;
+        margin-right: 120px; 
+        border-radius: 20px;
+    }
+
+    .box{
+        border: 1px solid black; 
+        background-color: rgb(255, 255, 255); 
+        height: 60px; 
+        margin-left: 10px; 
+        margin-right: 10px; 
+        border-radius: 5px;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .flexer{
+        display: flex;
+        flex-direction: column;
+    }
+  </style>
+  
+</head>
+<body>
+    
+    <div class="lefty">
+        <img src="https://www.graza.co/cdn/shop/products/graza-pdp-duo-header-3_2x_940c942a-d4de-4242-a70a-72f97ecd08b2.jpg?v=1668255245&width=1024" alt="Description of the image">
+    </div>
+    <div class="righty">
+        <div class="allbutton">
+            <button style="margin-right: 35px; margin-top: 20px; font-weight: 500;">Shop</button>
+            <button style="margin-right: 35px; margin-top: 20px; font-weight: 500;">Get Refills</button>
+            <button style="margin-right: 35px; margin-top: 20px; font-weight: 500;">About</button>
+            <button style="margin-right: 35px; margin-top: 20px; font-weight: 500;">Glog</button>
+            <button class="bg-white hover:bg-customYellow py-5 px-4  border-black rounded-full shadow ">
+                Cart[0]
+            </button>
+        </div>
+        
+        <strong style="text-align: center; margin-top: 10px;color: rgb(60, 66, 46); font-size: 50px;">“The Duo”</strong><p>
+        <u style="color: rgb(60, 66, 46); font-size: 50px;">Drizzle &amp; Sizzle Set</u>
+        <p>
+        186 Reviews
+
+        <div class="box1">
+            Quantity
+            <p>
+            <div class="flex-container">
+                <div class="box" >
+                    <div class="flexer">
+                        <div>1</div>
+                        <div>Size Bottle</div>
+                    </div>
+                </div>
+                <div class="box" >
+                    <div class="flexer">
+                        <div>1</div>
+                        <div>Size Bottle</div>
+                    </div>
+                </div>
+                <div class="box" >
+                    <div class="flexer">
+                        <div>1</div>
+                        <div>Size Bottle</div>
+                    </div>
+                </div>
+                <div class="box" >
+                    <div class="flexer">
+                        <div>1</div>
+                        <div>Size Bottle</div>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            one time Purchase - $37
+            <p></p>
+            subscribe & save $33
+            <p></p>
+            <div class="relative inline-block text-left">
+                <div>
+                    <button type="button" class="inline-flex w-full gap-x-0.5 rounded-md bg-white px-1.5 py-0 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                    Frequency: Every 1 Month
+                    <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                    </svg>
+                    </button>
+                </div>
+              
+                <!--
+                  Dropdown menu, show/hide based on menu state.
+              
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+                <!--<div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                    <div class="py-1" role="none">
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Every 2 Month</a>
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Every 3 Month</a>
+                    </div>
+                </div>-->
+            </div>
+            <p></p>
+            Select Refill Preference:
+            <p>
+            <div class="flex-container">
+                <div class="box" >hey</div>
+                <div class="box" >hey</div>
+            </div>
+            <p></p>
+            First Order:
+            <p></p>
+            1 Size Bottle, 1 Drizzle Bottle
+            <p></p>
+            Recurrinng:
+            <p></p>
+            1 Size Can, 1 Drizzle Can
+            <p></p>
+            <button class="bg-customYellow margin-top: 50px; text-gray-800 font-semibold py-5 px-40 border border-gray-400 rounded-full shadow">
+                Subscribe - $33.30
+            </button>
+            <p></p>
+            Skip, Edit or Cancel Anytime
+            <p></p>
+        </div>
+        <div class="box" style="border: 1px solid black; background-color: rgb(255, 255, 255); height: 80px; margin-top: 20px; margin-left: 120px; margin-right: 120px; border-radius: 20px;">
+            <div style="display: flex; align-items: center; ">
+                <img src="https://cdn.shopify.com/s/files/1/0550/0003/9638/files/graza-gift-icon.png?v=1705684468" alt="Description of the image" height="75" width="75" style="margin-top: 15px; margin-right: 15px;">
+                Buying multiple gifts? Send to multiple addresses  
+                <a href="https://gifts.zest.co/graza" target="”_blank”" style="text-decoration: underline;">here</a>.
+            </div>
+        </div>
+        <div class="feature-box" style="width: 300px; border: 1px solid #ccc; padding: 20px;margin: 50px auto;">
+            <div class="headings" style="display: flex; justify-content: space-between;">
+                <button class="heading active" onclick="showFeature(0)" style="background-color: #ddd;
+                font-weight: bold;">Feature 1</button>
+                <button class="heading" onclick="showFeature(1)" style="background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                padding: 10px;
+                cursor: pointer;
+                flex-grow: 1;
+                text-align: center;">Feature 2</button>
+                <button class="heading" onclick="showFeature(2)" style="background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                padding: 10px;
+                cursor: pointer;
+                flex-grow: 1;
+                text-align: center;">Feature 3</button>
+                <button class="heading" onclick="showFeature(3)" style="background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                padding: 10px;
+                cursor: pointer;
+                flex-grow: 1;
+                text-align: center;">Feature 4</button>
+            </div>
+            <div class="descriptions" style="margin-top: 20px;">
+                <div class="description active" id="feature-0">Description for Feature 1</div>
+                <div class="description" id="feature-1" style="display: none;">Description for Feature 2</div>
+                <div class="description" id="feature-2" style="display: none;">Description for Feature 3</div>
+                <div class="description" id="feature-3" style="display: none;">Description for Feature 4</div>
+            </div>
+        </div>
+        <script>
+            function showFeature(index) {
+            const headings = document.querySelectorAll('.heading');
+            const descriptions = document.querySelectorAll('.description');
+
+            // Remove active class from all headings and descriptions
+            headings.forEach(heading => heading.classList.remove('active'));
+            descriptions.forEach(description => description.classList.remove('active'));
+
+            // Add active class to the selected heading and description
+            headings[index].classList.add('active');
+            descriptions[index].classList.add('active');
+           }
+        </script>
+        
+    </div>
+
+
+    
+</body>
+</html>
