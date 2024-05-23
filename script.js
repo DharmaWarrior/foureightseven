@@ -10,3 +10,8 @@ function showFeature(index) {
     headings[index].classList.add('active');
     descriptions[index].classList.add('active');
 }
+
+function changeImage(element) {
+    const mainImage = document.getElementById('currentImage');
+    mainImage.src = element.src;
+}

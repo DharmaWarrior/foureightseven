@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         customYellow: '#d8e434',
+        customSkin: '#f6e6d9'  
       },
     },
   },

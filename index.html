@@ -9,8 +9,8 @@
         width: 50%;
         float: left;
         position: sticky;
-        top: 0;
-        overflow-y: auto;
+        margin-top: -27px;
+    
     }
     .righty {
         width: 50%;
@@ -21,94 +21,235 @@
     .allbutton {
         display: flex;
         justify-content: center;
+        padding-top: 30px;
+        padding-left: 81px;
+        
     }
 
-    .box1 {
+    .cart {
+        padding-left: 30px;
+    }
+
+    .topic {
+        text-align: center;
+        padding-top: 35px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 50px;
+        letter-spacing: -1.44px; 
+        color: rgb(60, 66, 46);
+    }
+
+    .boxbigger {
+        margin-top: 10px;
+        width: 510px;
+        padding: 20px;
+        font-weight: 500;
         border: 1px solid black; 
-        background-color: rgb(255, 255, 255); 
+        background-color: #fff4ec;
         height: 600px; 
         margin-left: 120px; 
-        padding: 10px;
         margin-right: 120px; 
         border-radius: 20px;
     }
 
-    .box{
-        border: 1px solid black; 
-        background-color: rgb(255, 255, 255); 
-        height: 60px; 
-        margin-left: 10px; 
-        margin-right: 10px; 
-        border-radius: 5px;
-    }
+    
 
     .flex-container {
         display: flex;
         justify-content: center;
     }
     
-    .flexer{
-        display: flex;
-        flex-direction: column;
+    
+    .boxinner {
+        border: 1px solid black; 
+        background-color: #fff4ec;
+        width: 150px;
+        padding: 0px;
+        border-radius: 10px;
+        text-align: center;
+        margin-right: 10px;
+        overflow: hidden;
     }
+
+    .flexer {
+        width: 105px;
+    }
+
+
+    .thumbnails {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        padding-left: 30px;
+        margin-top: -486px;
+        
+    }
+
+    .imager {
+        height: 799px;
+    }
+    .thumbnail {
+        
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border-width: 1.6px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        border-color: black;
+    }
+
+
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .clickable {
+        margin-top: 10px;
+        padding-top: 16px;
+        border-top: black;
+        border-style: dashed;
+        border-width: 0.8px;  
+        align-items: center;
+        display: flex;      
+        cursor: pointer;
+        font-size: 16px;
+        gap: 15px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .dot {
+    height: 20px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 1px;
+    display: inline-block;
+    }
+
+
+
+
+
+
   </style>
-  
+
 </head>
 <body>
+    <script src="./script.js"></script>
     
     <div class="lefty">
-        <img src="https://www.graza.co/cdn/shop/products/graza-pdp-duo-header-3_2x_940c942a-d4de-4242-a70a-72f97ecd08b2.jpg?v=1668255245&width=1024" alt="Description of the image">
+        <img class="imager" src="https://www.graza.co/cdn/shop/products/graza-pdp-duo-header-3_2x_940c942a-d4de-4242-a70a-72f97ecd08b2.jpg?v=1668255245&width=1024" alt="Main Image" id="currentImage">
+        <div class="thumbnails">
+            <img src="https://www.graza.co/cdn/shop/products/graza-pdp-duo-header-3_2x_940c942a-d4de-4242-a70a-72f97ecd08b2.jpg?v=1668255245&width=1024" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/files/Resize9_4094008f-df38-4c7a-8fa3-e90927e07798.png?v=1715047934&width=1024" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/products/graza-pdp-sizzle-header-3_2x_98f6ef49-281f-4095-b8bb-3045391401fe.jpg?v=1715047934&width=1024" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/products/graza-pdp-drizzle-header-3_2x_569477b7-acf0-4950-93a4-c263d6893aa4.jpg?v=1715047934&width=1024" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/files/Resize5_1a0df87c-aa13-46f1-b9d6-29b076bf96b0.png?v=1715047934&width=1024" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/products/graza-home-sizzle-in-usecopy_2x_47ab5af6-0732-4835-96ba-9853798e5b9d.jpg?v=1715047934&width=1024" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+        </div>
     </div>
+
     <div class="righty">
         <div class="allbutton">
-            <button style="margin-right: 35px; margin-top: 20px; font-weight: 500;">Shop</button>
-            <button style="margin-right: 35px; margin-top: 20px; font-weight: 500;">Get Refills</button>
-            <button style="margin-right: 35px; margin-top: 20px; font-weight: 500;">About</button>
-            <button style="margin-right: 35px; margin-top: 20px; font-weight: 500;">Glog</button>
-            <button class="bg-white hover:bg-customYellow py-5 px-4  border-black rounded-full shadow ">
-                Cart[0]
-            </button>
+            <button style="margin-right: 35px;font-weight: 500;">Shop</button>
+            <button style="margin-right: 35px;font-weight: 500;">Get Refills</button>
+            <button style="margin-right: 35px;font-weight: 500;">About</button>
+            <button style="margin-right: 35px;font-weight: 500;">Glog</button>
+            <div class="cart">
+                <button class="bg-white hover:bg-customYellow text-black font-semibold border border-black py-2 px-4 rounded-full">
+                    Button
+                </button>
+            </div>
+            
         </div>
         
-        <strong style="text-align: center; margin-top: 10px;color: rgb(60, 66, 46); font-size: 50px;">“The Duo”</strong><p>
-        <u style="color: rgb(60, 66, 46); font-size: 50px;">Drizzle &amp; Sizzle Set</u>
-        <p>
-        186 Reviews
+        <h3 class="topic">
+            “The Duo”
+            <p style="margin-top: -40px;"></p>
+            <u>Drizzle & Sizzle Set</u>
+            <p style="margin-top: -30px;"></p>
+            <text style="font-size: 15px;"><b>1899 Reviews</b></text>
+        </h3>
+        
 
-        <div class="box1">
+        <div class="boxbigger">
             Quantity
             <p>
             <div class="flex-container">
-                <div class="box" >
-                    <div class="flexer">
-                        <div>1</div>
-                        <div>Size Bottle</div>
-                    </div>
+                <div class="boxinner" >
+                    <button>
+                        <div class="flexer">
+                            <div style="font-size: 14px; background-color: #3c422e; color: #fff4ec; line-height: 38px;">+10% off</div>
+                            <div style="padding-top: 6px; background-color: #9eef80;">
+                                1
+                                <p style="margin: -5px;"></p>Set
+                            </div>
+                            
+                        </div>
+                    </button>
                 </div>
-                <div class="box" >
-                    <div class="flexer">
-                        <div>1</div>
-                        <div>Size Bottle</div>
-                    </div>
+                <div class="boxinner" >
+                    <button class="hover:bg-customSkin">
+                        <div class="flexer">
+                            <div style="font-size: 14px; background-color: #3c422e; color: #fff4ec;">
+                                Free Shipping!
+                                <p style="margin: -5px;"></p>
+                                +14%
+                            </div>
+                            <div style="padding-top: 5px;">
+                                2
+                                <p style="margin: -5px;"></p>Sets
+                            </div>
+                            
+                        </div>
+                    </button>
                 </div>
-                <div class="box" >
-                    <div class="flexer">
-                        <div>1</div>
-                        <div>Size Bottle</div>
-                    </div>
+                <div class="boxinner" >
+                    <button class="hover:bg-customSkin">
+                        <div class="flexer">
+                            <div style="font-size: 14px; background-color: #3c422e; color: #fff4ec;">
+                                Free Shipping!
+                                <p style="margin: -5px;"></p>
+                                +15%
+                            </div>
+                            <div style="padding-top: 5px;">
+                                3
+                                <p style="margin: -5px;"></p>Sets
+                            </div>
+                        </div>
+                    </button>
                 </div>
-                <div class="box" >
-                    <div class="flexer">
-                        <div>1</div>
-                        <div>Size Bottle</div>
-                    </div>
+                <div class="boxinner" >
+                    <button class="hover:bg-customSkin">
+                        <div class="flexer">
+                            <div style="font-size: 14px; background-color: #3c422e; color: #fff4ec; ">
+                                Free Shipping!
+                                <p style="margin: -5px;"></p>
+                                +17%
+                            </div>
+                            <div style="padding-top: 5px;">
+                                6
+                                <p style="margin: -5px;"></p>Sets
+                            </div>
+                        </div>
+                    </button>
                 </div>
             </div>
-            <p></p>
-            one time Purchase - $37
-            <p></p>
-            subscribe & save $33
-            <p></p>
+
+            <div class="clickable">
+                <span class="dot"></span>
+                One Time Purchase - $37
+            </div>
+            <div class="clickable">
+                <span class="dot"></span>
+                Subscribe & Save - $37
+            </div>
+            
             <div class="relative inline-block text-left">
                 <div>
                     <button type="button" class="inline-flex w-full gap-x-0.5 rounded-md bg-white px-1.5 py-0 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
