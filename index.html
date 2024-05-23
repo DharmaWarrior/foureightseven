@@ -1,156 +1,292 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./src/output.css" rel="stylesheet">
-  <style>
-    .lefty {
-        width: 50%;
-        float: left;
-        position: sticky;
-        margin-top: -27px;
-    
-    }
-    .righty {
-        width: 50%;
-        float: right;
-        background-color: rgba(246,230,217,255);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <style>
+        .body {
+            font-family: "Helvetica";
+        }
 
-    .allbutton {
-        display: flex;
-        justify-content: center;
-        padding-top: 30px;
-        padding-left: 81px;
-        
-    }
+        .lefty {
+            width: 50%;
+            float: left;
+            position: sticky;
+            margin-top: -27px;
 
-    .cart {
-        padding-left: 30px;
-    }
+        }
 
-    .topic {
-        text-align: center;
-        padding-top: 35px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 50px;
-        letter-spacing: -1.44px; 
-        color: rgb(60, 66, 46);
-    }
+        .righty {
+            width: 50%;
+            float: right;
+            background-color: rgba(246, 230, 217, 255);
+        }
 
-    .boxbigger {
-        margin-top: 10px;
-        width: 510px;
-        padding: 20px;
-        font-weight: 500;
-        border: 1px solid black; 
-        background-color: #fff4ec;
-        height: 600px; 
-        margin-left: 120px; 
-        margin-right: 120px; 
-        border-radius: 20px;
-    }
+        .allbutton {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+            padding-left: 81px;
 
-    
+        }
 
-    .flex-container {
-        display: flex;
-        justify-content: center;
-    }
-    
-    
-    .boxinner {
-        border: 1px solid black; 
-        background-color: #fff4ec;
-        width: 150px;
-        padding: 0px;
-        border-radius: 10px;
-        text-align: center;
-        margin-right: 10px;
-        overflow: hidden;
-    }
+        .cart {
+            padding-left: 30px;
+        }
 
-    .flexer {
-        width: 105px;
-    }
+        .topic {
+            text-align: center;
+            padding-top: 35px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 50px;
+            letter-spacing: -1.44px;
+            color: rgb(60, 66, 46);
+        }
+
+        .box {
+            border: 1px solid black;
+            background-color: rgb(255, 255, 255);
+            height: 80px;
+            margin-top: 20px;
+            margin-left: 120px;
+            margin-right: 120px;
+            border-radius: 20px;
+            flex-direction: row;
+        }
 
 
-    .thumbnails {
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
-        padding-left: 30px;
-        margin-top: -486px;
-        
-    }
-
-    .imager {
-        height: 799px;
-    }
-    .thumbnail {
-        
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        border-width: 1.6px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        border-color: black;
-    }
-
-
-    .thumbnail img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .clickable {
-        margin-top: 10px;
-        padding-top: 16px;
-        border-top: black;
-        border-style: dashed;
-        border-width: 0.8px;  
-        align-items: center;
-        display: flex;      
-        cursor: pointer;
-        font-size: 16px;
-        gap: 15px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    .dot {
-    height: 20px;
-    width: 20px;
-    background-color: #bbb;
-    border-radius: 50%;
-    border-color: black;
-    border-width: 1px;
-    display: inline-block;
-    }
+        .boxbigger {
+            margin-top: 20px;
+            width: 510.1px;
+            padding: 20px;
+            font-weight: 500;
+            border: 0.8px solid black;
+            background-color: #fff4ec;
+            height: 703.2px;
+            margin-left: 135px;
+            margin-right: 120px;
+            border-radius: 20px;
+        }
 
 
 
+        .flex-container {
+            display: flex;
+
+        }
+
+
+        .boxinner {
+            border: 0.8px solid black;
+            background-color: #fff4ec;
+            width: 107.95px;
+            height: 80px;
+            border-radius: 10px;
+            text-align: center;
+            margin-right: 10px;
+            overflow: hidden;
+
+        }
+
+        .buttoninner {
+            border: 0.8px solid black;
+            background-color: #fff4ec;
+            width: 107.95px;
+            height: 80px;
+            border-radius: 10px;
+            text-align: center;
+            margin-right: 10px;
+            overflow: hidden;
+
+        }
 
 
 
-  </style>
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            padding-left: 30px;
+            margin-top: -486px;
+
+        }
+
+        .imager {
+            height: 799px;
+        }
+
+        .thumbnail {
+
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border-width: 1.6px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border-color: black;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .clickable {
+            margin-top: 10px;
+            padding-top: 16px;
+            border-top: black;
+            border-style: dashed;
+            border-width: 0.8px;
+            align-items: center;
+            display: flex;
+            cursor: pointer;
+            font-size: 16px;
+            gap: 15px;
+            width: 450px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+
+
+        .dot {
+            height: 20px;
+            width: 20px;
+            background-color: #fff4ec;
+            border-radius: 50%;
+            border-color: black;
+            border-width: 1px;
+            display: inline-block;
+        }
+
+        .dot:hover {
+            background-color: #9eef80;
+        }
+
+        .dropdown {
+            width: 450px;
+            min-width: 15em;
+            position: relative;
+            top: 0;
+            margin-top: 1rem;
+
+        }
+
+        .select {
+
+            color: #323741;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px #323741 solid;
+            border-radius: 0.5em;
+            padding: 1em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .select-clicked {
+            border: 2px #26489a solid;
+            box-shadow: 0 0 0.8em #26489a;
+        }
+
+        .select:hover {
+            background: #F6E6D9;
+        }
+
+        .caret {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #fff;
+            transition: 0.3s;
+        }
+
+        #currentImage {
+            transition: opacity 0.1s ease-in-out;
+            /* Adjust the duration and timing function as needed */
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+
+        .caret-rotate {
+            transform: rotate(180deg);
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0.2em 0.5em;
+            background: #fff4ec;
+            border: 1px #363a43 solid;
+            box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+            border-radius: 0.5em;
+            color: #323741;
+            position: absolute;
+            top: 4em;
+            left: 50%;
+            width: 100%;
+            transform: translateX(-50%);
+            opacity: 0;
+            display: none;
+            transition: 0.2s;
+            z-index: 1;
+        }
+
+        .menu li {
+            padding: 0.7em 0.5em;
+            margin: 0.3em 0;
+            border-radius: 0.5em;
+            cursor: pointer;
+        }
+
+        .menu li:hover {
+            background: #F6E6D9;
+        }
+
+        .active {
+            background: #F6E6D9;
+        }
+
+        .menu-open {
+            display: block;
+            opacity: 1;
+        }
+    </style>
 
 </head>
+
 <body>
-    <script src="./script.js"></script>
-    
+
+
     <div class="lefty">
-        <img class="imager" src="https://www.graza.co/cdn/shop/products/graza-pdp-duo-header-3_2x_940c942a-d4de-4242-a70a-72f97ecd08b2.jpg?v=1668255245&width=1024" alt="Main Image" id="currentImage">
+
+        <img class="imager"
+            src="https://www.graza.co/cdn/shop/products/graza-pdp-duo-header-3_2x_940c942a-d4de-4242-a70a-72f97ecd08b2.jpg?v=1668255245&width=1024"
+            alt="Main Image" id="currentImage">
+
         <div class="thumbnails">
-            <img src="https://www.graza.co/cdn/shop/products/graza-pdp-duo-header-3_2x_940c942a-d4de-4242-a70a-72f97ecd08b2.jpg?v=1668255245&width=1024" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(this)">
-            <img src="https://www.graza.co/cdn/shop/files/Resize9_4094008f-df38-4c7a-8fa3-e90927e07798.png?v=1715047934&width=1024" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
-            <img src="https://www.graza.co/cdn/shop/products/graza-pdp-sizzle-header-3_2x_98f6ef49-281f-4095-b8bb-3045391401fe.jpg?v=1715047934&width=1024" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
-            <img src="https://www.graza.co/cdn/shop/products/graza-pdp-drizzle-header-3_2x_569477b7-acf0-4950-93a4-c263d6893aa4.jpg?v=1715047934&width=1024" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
-            <img src="https://www.graza.co/cdn/shop/files/Resize5_1a0df87c-aa13-46f1-b9d6-29b076bf96b0.png?v=1715047934&width=1024" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
-            <img src="https://www.graza.co/cdn/shop/products/graza-home-sizzle-in-usecopy_2x_47ab5af6-0732-4835-96ba-9853798e5b9d.jpg?v=1715047934&width=1024" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/products/graza-pdp-duo-header-3_2x_940c942a-d4de-4242-a70a-72f97ecd08b2.jpg?v=1668255245&width=1024"
+                alt="Thumbnail 1" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/files/Resize9_4094008f-df38-4c7a-8fa3-e90927e07798.png?v=1715047934&width=1024"
+                alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/products/graza-pdp-sizzle-header-3_2x_98f6ef49-281f-4095-b8bb-3045391401fe.jpg?v=1715047934&width=1024"
+                alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/products/graza-pdp-drizzle-header-3_2x_569477b7-acf0-4950-93a4-c263d6893aa4.jpg?v=1715047934&width=1024"
+                alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/files/Resize5_1a0df87c-aa13-46f1-b9d6-29b076bf96b0.png?v=1715047934&width=1024"
+                alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+            <img src="https://www.graza.co/cdn/shop/products/graza-home-sizzle-in-usecopy_2x_47ab5af6-0732-4835-96ba-9853798e5b9d.jpg?v=1715047934&width=1024"
+                alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
         </div>
     </div>
 
@@ -161,152 +297,187 @@
             <button style="margin-right: 35px;font-weight: 500;">About</button>
             <button style="margin-right: 35px;font-weight: 500;">Glog</button>
             <div class="cart">
-                <button class="bg-white hover:bg-customYellow text-black font-semibold border border-black py-2 px-4 rounded-full">
-                    Button
+                <button
+                    class="bg-white hover:bg-customYellow text-black font-semibold border border-black py-2 px-4 rounded-full"
+                    style="width: 104px; height: 36px; padding-top: 4px;">
+                    Cart[0]
                 </button>
             </div>
-            
+
         </div>
-        
+
         <h3 class="topic">
             “The Duo”
             <p style="margin-top: -40px;"></p>
             <u>Drizzle & Sizzle Set</u>
             <p style="margin-top: -30px;"></p>
-            <text style="font-size: 15px;"><b>1899 Reviews</b></text>
+            <text style="font-size: 15px; font-weight: 600;"> &#9733; &#9733; &#9733; &#9733; &#9733; 1899
+                Reviews</text>
         </h3>
-        
+
 
         <div class="boxbigger">
             Quantity
             <p>
             <div class="flex-container">
-                <div class="boxinner" >
-                    <button>
-                        <div class="flexer">
-                            <div style="font-size: 14px; background-color: #3c422e; color: #fff4ec; line-height: 38px;">+10% off</div>
-                            <div style="padding-top: 6px; background-color: #9eef80;">
-                                1
-                                <p style="margin: -5px;"></p>Set
-                            </div>
-                            
+                <div class="boxinner">
+
+
+                    <div
+                        style="font-size: 10px; background-color: #3c422e;  color: #fff4ec; height: 36px; width: 108px; padding-top: 10px;">
+                        +10% off</div>
+                    <div class="flexer">
+
+                        <div style=" background-color: #9eef80;">
+                            1
+                            <p style="margin: -5px;"></p>Set
                         </div>
-                    </button>
+
+                    </div>
+
                 </div>
-                <div class="boxinner" >
-                    <button class="hover:bg-customSkin">
-                        <div class="flexer">
-                            <div style="font-size: 14px; background-color: #3c422e; color: #fff4ec;">
-                                Free Shipping!
-                                <p style="margin: -5px;"></p>
-                                +14%
-                            </div>
-                            <div style="padding-top: 5px;">
-                                2
-                                <p style="margin: -5px;"></p>Sets
-                            </div>
-                            
+                <div class="boxinner">
+
+                    <div class="flexer">
+                        <div
+                            style="font-size: 10px; background-color: #3c422e; color: #fff4ec; height: 36px; width: 108px; padding-top: 5px;">
+                            Free Shipping!
+                            <p style="margin: -1px;"></p>
+                            +14%
                         </div>
-                    </button>
+                        <div>
+                            2
+                            <p style="margin: -5px;"></p>Sets
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="boxinner" >
-                    <button class="hover:bg-customSkin">
-                        <div class="flexer">
-                            <div style="font-size: 14px; background-color: #3c422e; color: #fff4ec;">
-                                Free Shipping!
-                                <p style="margin: -5px;"></p>
-                                +15%
-                            </div>
-                            <div style="padding-top: 5px;">
-                                3
-                                <p style="margin: -5px;"></p>Sets
-                            </div>
+                <div class="boxinner">
+
+                    <div class="flexer">
+                        <div
+                            style="font-size: 10px; background-color: #3c422e; color: #fff4ec; height: 36px; width: 108px; padding-top: 5px;">
+                            Free Shipping!
+                            <p style="margin: -1px;"></p>
+                            +15%
                         </div>
-                    </button>
+                        <div>
+                            3
+                            <p style="margin: -5px;"></p>Sets
+                        </div>
+                    </div>
+
                 </div>
-                <div class="boxinner" >
-                    <button class="hover:bg-customSkin">
-                        <div class="flexer">
-                            <div style="font-size: 14px; background-color: #3c422e; color: #fff4ec; ">
-                                Free Shipping!
-                                <p style="margin: -5px;"></p>
-                                +17%
-                            </div>
-                            <div style="padding-top: 5px;">
-                                6
-                                <p style="margin: -5px;"></p>Sets
-                            </div>
+                <div class="boxinner">
+
+                    <div class="flexer">
+                        <div
+                            style="font-size: 10px; background-color: #3c422e; color: #fff4ec; height: 36px; width: 108px; padding-top: 5px; ">
+                            Free Shipping!
+                            <p style="margin: -1px;"></p>
+                            +17%
                         </div>
-                    </button>
+                        <div>
+                            6
+                            <p style="margin: -5px;"></p>Sets
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="clickable">
+            <div class="clickable" style="text-align: right;">
                 <span class="dot"></span>
-                One Time Purchase - $37
+                <span style="float: left;">One Time Purchase -</span>
+                <span style="float: right; padding-left: 215px;">$37</span>
+
+
+
+
             </div>
             <div class="clickable">
                 <span class="dot"></span>
-                Subscribe & Save - $37
+                <span style="float: left;">Subscribe & Save -</span>
+                <span style="float: right; padding-left: 180px; color: #3c422e;"><s style="opacity: 30%;">$37</s>
+                    $33.30</span>
             </div>
-            
-            <div class="relative inline-block text-left">
-                <div>
-                    <button type="button" class="inline-flex w-full gap-x-0.5 rounded-md bg-white px-1.5 py-0 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
-                    Frequency: Every 1 Month
-                    <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                    </svg>
-                    </button>
+
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Frequency: Every 1 Month</span>
+                    <div class="caret"></div>
                 </div>
-              
-                <!--
-                  Dropdown menu, show/hide based on menu state.
-              
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-                -->
-                <!--<div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                    <div class="py-1" role="none">
-                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Every 2 Month</a>
-                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Every 3 Month</a>
-                    </div>
-                </div>-->
+                <ul class="menu">
+                    <li>Every 2 Month</li>
+                    <li>Every 3 Month</li>
+                </ul>
             </div>
-            <p></p>
-            Select Refill Preference:
+
+
+            <div style="margin-top: 15px;">Select Refill Preference:</div>
+
             <p>
-            <div class="flex-container">
-                <div class="box" >hey</div>
-                <div class="box" >hey</div>
+
+            <div class="flex-container" style="gap: 10px;">
+                <div class="boxy"
+                    style=" cursor: pointer; height: 80px; width: 227.45px; display: flex; flex-direction: row; margin-left: 0px; background-color: #9eef80; border-width: 0.8px; border-color: black; border-radius: 5px;">
+                    <img src="https://www.graza.co/cdn/shop/files/Duo_Cans_PNG.png?v=1712330844&width=150" alt="/">
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <span>Refill Cans</span>
+                        <span style="font-size: 10px;">$33.30/order</span>
+                    </div>
+
+                </div>
+                <div class="boxy"
+                    style="  background-color: #f6e6d9; cursor: pointer; height: 80px; width: 227.45px; display: flex; flex-direction: row; margin-left: 0px; border-radius: 5px;">
+                    <img src="https://www.graza.co/cdn/shop/files/graza-duo-bottles-transparent.png?v=1699358957&width=75"
+                        alt="/">
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <span>Squueze Bottles</span>
+                        <span style="font-size: 10px;">$33.30/order</span>
+                    </div>
+                </div>
             </div>
-            <p></p>
-            First Order:
-            <p></p>
-            1 Size Bottle, 1 Drizzle Bottle
-            <p></p>
-            Recurrinng:
-            <p></p>
-            1 Size Can, 1 Drizzle Can
-            <p></p>
-            <button class="bg-customYellow margin-top: 50px; text-gray-800 font-semibold py-5 px-40 border border-gray-400 rounded-full shadow">
-                Subscribe - $33.30
-            </button>
-            <p></p>
-            Skip, Edit or Cancel Anytime
-            <p></p>
+
+            <div style="display: flex; flex-direction: column; margin-top: 10px;">
+
+                First Order:
+                <span style="font-weight: 400;">1 Size Bottle, 1 Drizzle Bottle</span>
+
+                <p style="margin-top: -8px;"></p>
+                Recurrinng:
+                <span style="font-weight: 400;">1 Size Can, 1 Drizzle Can</span>
+
+                <p></p>
+            </div>
+
+
+            <div
+                style="border-top: black; border-style: dashed; border-width: 0.8px; display: flex; flex-direction: column; align-items: center;">
+                <button
+                    class="bg-customYellow margin-top: 50px; text-gray-800 font-semibold py-2 px-2 border-top border-black rounded-full "
+                    style="margin-top: 20px; height: 48px; width: 470px;">
+                    Subscribe - $33.30
+                </button>
+                <p></p>
+                <span style="font-weight: 400;">Edit or Cancel Anytime</span>
+            </div>
+
+
+
+
         </div>
-        <div class="box" style="border: 1px solid black; background-color: rgb(255, 255, 255); height: 80px; margin-top: 20px; margin-left: 120px; margin-right: 120px; border-radius: 20px;">
+
+        <div class="boxbigger" style="height: 80px; margin-top: 20px; padding: 16px;">
             <div style="display: flex; align-items: center; ">
-                <img src="https://cdn.shopify.com/s/files/1/0550/0003/9638/files/graza-gift-icon.png?v=1705684468" alt="Description of the image" height="75" width="75" style="margin-top: 15px; margin-right: 15px;">
-                Buying multiple gifts? Send to multiple addresses  
+                <img src="https://cdn.shopify.com/s/files/1/0550/0003/9638/files/graza-gift-icon.png?v=1705684468"
+                    alt="Description of the image" height="75" width="75" style="margin-top: 15px; margin-right: 15px;">
+                Buying multiple gifts? Send to multiple addresses
                 <a href="https://gifts.zest.co/graza" target="”_blank”" style="text-decoration: underline;">here</a>.
             </div>
         </div>
+
         <div class="feature-box" style="width: 300px; border: 1px solid #ccc; padding: 20px;margin: 50px auto;">
             <div class="headings" style="display: flex; justify-content: space-between;">
                 <button class="heading active" onclick="showFeature(0)" style="background-color: #ddd;
@@ -337,24 +508,10 @@
                 <div class="description" id="feature-3" style="display: none;">Description for Feature 4</div>
             </div>
         </div>
-        <script>
-            function showFeature(index) {
-            const headings = document.querySelectorAll('.heading');
-            const descriptions = document.querySelectorAll('.description');
-
-            // Remove active class from all headings and descriptions
-            headings.forEach(heading => heading.classList.remove('active'));
-            descriptions.forEach(description => description.classList.remove('active'));
-
-            // Add active class to the selected heading and description
-            headings[index].classList.add('active');
-            descriptions[index].classList.add('active');
-           }
-        </script>
-        
     </div>
 
+    <script src="./script.js"></script>
 
-    
 </body>
+
 </html>
